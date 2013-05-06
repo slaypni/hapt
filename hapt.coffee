@@ -122,7 +122,7 @@ Listen Key events.
 @param {EventTarget} doc The target calls addEventListener().
 @param {Boolean} useCapture Passed into addEventListener().
 @param {(Element|String)[]} targets Key events to the target listed in this param can call callback handler.
-    If the value was null, events to any target will call callback handler.
+    If the value was an empty array, events to any target will call callback handler.
 ###
 listen = (cb, doc = window, useCapture = true, targets = ['body', 'html']) ->
     state = new _KeyState()
