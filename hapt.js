@@ -44,16 +44,37 @@ THE SOFTWARE.
     92: 'Meta',
     8: 'BackSpace',
     9: 'Tab',
+    13: 'Enter',
+    19: 'Pause',
+    20: 'CapsLock',
     27: 'Esc',
     32: 'Space',
     33: 'PageUp',
     34: 'PageDown',
+    35: 'End',
+    36: 'Home',
     37: 'Left',
     38: 'Up',
     39: 'Right',
     40: 'Down',
+    42: 'PrintScreen',
     45: 'Insert',
     46: 'Delete',
+    96: 'Num0',
+    97: 'Num1',
+    98: 'Num2',
+    99: 'Num3',
+    100: 'Num4',
+    101: 'Num5',
+    102: 'Num6',
+    103: 'Num7',
+    104: 'Num8',
+    105: 'Num9',
+    106: 'Mul',
+    107: 'Add',
+    109: 'Sub',
+    110: 'Dec',
+    111: 'Div',
     112: 'F1',
     113: 'F2',
     114: 'F3',
@@ -66,6 +87,11 @@ THE SOFTWARE.
     121: 'F10',
     122: 'F11',
     123: 'F12',
+    124: 'F13',
+    125: 'F14',
+    126: 'F15',
+    144: 'NumLock',
+    145: 'ScrollLock',
     186: ';',
     187: '=',
     188: ',',
@@ -220,12 +246,12 @@ THE SOFTWARE.
       var isTargetElement, isTargetTagname;
 
       isTargetTagname = function() {
-        return target_tagnames.some(function(t, _i, _a) {
+        return target_tagnames.some(function(t) {
           return t === event.target.tagName.toLowerCase();
         });
       };
       isTargetElement = function() {
-        return target_elements.some(function(t, _i, _a) {
+        return target_elements.some(function(t) {
           return t === event.target;
         });
       };
