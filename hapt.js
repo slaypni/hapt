@@ -246,8 +246,11 @@ THE SOFTWARE.
       var isTargetElement, isTargetTagname;
 
       isTargetTagname = function() {
+        var tagName;
+
+        tagName = event.target.tagName.toLowerCase();
         return target_tagnames.some(function(t) {
-          return t === event.target.tagName.toLowerCase();
+          return t === tagName;
         });
       };
       isTargetElement = function() {
